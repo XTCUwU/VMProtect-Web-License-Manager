@@ -1,0 +1,885 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	margin: 0;
+    width: 100%;
+    height: 100%;
+	font: 14px Arial;
+    background-image: url('../images/bg.gif');
+}
+
+:focus { 
+	outline: none; 
+} 
+
+h1, h2, h3{
+	font-weight: bold;
+	color: #3e3f46;
+}
+
+img{
+	border: none;
+}
+
+table {
+	padding:0;
+	margin:0;
+}
+
+td, th {
+	padding:0;
+	margin:0;
+}
+
+h1{
+	font-size: 1.7em;
+	padding-bottom: 0.5em;
+}
+
+h2{
+	font-size: 1.3em;
+	padding-bottom: 0.3em;
+}
+
+h3{
+	font-size: 1em;
+	padding-bottom: 0.2em;
+}
+
+a{
+	text-decoration: none;
+	color: #333333;
+}
+
+a:hover{
+	color: #4e84f3;
+}
+
+button, input, select{
+    font-family: Arial;
+}
+
+textarea{
+	resize: none;
+	font-size: 1em;
+	font-family: Courier New;
+	word-wrap:break-word;
+}
+
+hr {
+	color: #CECECE;
+	background-color: #CECECE;
+	height: 1px;
+	border: 1px solid #F0F0F0;
+	border-width: 0px 0px 1px 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#menuDiv {
+	width: 180px;
+    min-height: 100%;
+    background-color: #1D2025;
+    float:left;
+    color: white;
+}
+
+#headerDiv {
+    height: 5%;
+	border-bottom: 1px solid grey;
+}
+
+#mainDiv {
+    height: 100%;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#contentDiv {
+    position: relative;
+    height: 95%;
+    min-height: 95%;
+	padding-top: 15px;
+}
+
+#footerDiv {
+    position: relative;
+    height: 30px;
+    margin-top: -35px;
+	color: #717171;
+	font-size: 0.8em;
+}
+
+#outer_content{
+	width: 100%;
+	overflow:auto;
+	height: 80%;
+}
+
+#inner_content{
+	width: 100%;
+	overflow:auto;
+}
+
+#log{
+	position:absolute;
+	top: 5px;
+	left: 50%;
+	font-size: 0.8em;
+	padding: 3px;
+	background-color: #fffea9;
+	display: none;
+}
+
+/* Menu */
+#logo{
+	margin: 15px;
+}
+
+.menu {
+	margin-left: 5px;
+}
+
+.menuItem1 {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.menuItem1 a{
+	display: inline-block;
+	padding-left: 10px;
+	width: 200px;
+	height: 26px;
+	line-height: 26px;
+	text-decoration: none;
+	font-size: 1em;
+	color: #C9C9C9;
+	font-weight: bold;
+	background-image: url('../images/menu.png');
+	background-repeat: no-repeat;
+}
+
+.menuItem1 a.active{
+	background-image: url('../images/menu_active.png');
+	color: #333333;
+	font-weight: bold;
+}
+
+.menuItem1 a.active:hover{
+	background-image: url('../images/menu_active_hover.png');	
+}
+
+.menuItem1 a:hover{
+	background-image: url('../images/menu_hover.png');	
+}
+
+.menuItem2 {
+	margin-bottom: 6px;
+}
+
+.menuItem2 a{
+	color: #FFFFFF;
+	font-size: 0.9em;
+	padding-left: 10px;
+	background-repeat: no-repeat;
+}
+
+.menuItem2 a:hover{
+	color: #92b3f4;
+	text-decoration: none;
+}
+
+.menuItem2 a.active{
+	font-weight: bold;
+	text-decoration: none;
+	background-image: url('../images/arrow.png');
+	background-position: right 6px;
+	padding-right: 20px;
+}
+
+/* Horizontal table */
+
+#listTbl{
+	border-spacing: 0;
+	width: 100%;
+	*border-collapse: collapse;
+}
+
+#listTbl td {
+	color: #333333;
+	background-color: #FAFAFA;	
+	border-color: #E0E0E0;
+	border-style: solid;
+	border-width: 0px 1px 1px 0px;
+	padding: 10px;
+	text-align: left;
+	vertical-align: top;
+	/* IE7 hack - doesn't understand :last-child */
+	*border-width: 1px;
+}
+
+#listTbl td:first-child {
+	border-width: 0px 1px 1px 1px;
+}
+
+#listTbl th {
+	padding: 10px;
+	text-align: left;
+	background-color: #EDEDED;
+	color: #727272;
+	font-size: 0.8em;
+	font-weight: normal;
+	border-color: #E0E0E0;
+	border-style: solid;
+	border-width: 1px 1px 1px 0px;
+}
+
+#listTbl th:first-child {
+	border-width: 1px 1px 1px 1px;
+}
+
+#listTbl tr.active td{
+	background-color: #EFF0F3;
+}
+
+#listTbl td.empty{
+	padding: 0;
+	width: 30px;
+	border-width: 0 1px 0 0;
+	background-color: transparent !important;
+}
+
+#listTbl td.emptylast{
+	padding: 0;
+	width: 30px;
+	border-width: 0 1px 1px 0;
+	background-color: transparent !important;
+}
+
+.listItemActions{
+	visibility: hidden;
+}
+
+.listItemActions a{
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+.listItemActions a:hover{
+	text-decoration: none;
+	border: none;
+}
+
+.listItemActions a.editLink{
+	color: black;
+}
+.listItemActions a.copyLink{
+	color: green;
+}
+.listItemActions a.blockLink{
+	color: orange;
+}
+.listItemActions a.deleteLink{
+	color: red;
+}
+
+/* Global header */
+#helloTxt{
+	color:#797979;
+	padding-right: 10px;
+}
+
+#logoutLnk{
+	background-image: url('../images/logout.png');
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	margin-left: 18px;
+	color:#494949;
+}
+
+#helpLnk{
+	background-image: url('../images/help.png');
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	margin-left: 18px;
+	color:#494949;
+}
+
+/* Form table */
+.formDiv {
+	background-color: #EBEBEC;
+	border: 1px solid #D2D2D2;
+	padding-top: 30px;
+	background-image: url('../images/form_top.png');
+	background-repeat: repeat-x;
+	height: 85%;
+	max-height: 85%;
+	overflow-y: auto;
+}
+
+.formTbl{
+	table-layout:fixed;
+	width: 600px;
+	font-size: 0.9em;
+}
+
+.formTbl th{
+	text-align: right;
+	padding-top: 7px;
+	white-space: nowrap;
+	vertical-align: top;
+	color: #333333;
+	font-weight: normal;
+	width: 220px;
+}
+
+.formTbl td{
+	text-align: left;
+	padding-left:20px;
+	padding-bottom:5px;
+	width: 340px;
+	color: #1d2025;
+}
+
+.formTbl input, .formTbl textarea, .formTbl select
+{
+	width: 320px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 6px;
+	border: 1px solid #B2B4B5;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.formTbl select, input.file{
+	width: 338px;
+}
+
+.formTbl input.button{
+	padding: 0;
+	width: auto;
+}
+
+.formTbl input.checkbox{
+	width: 24px;
+	height: 24px;
+	padding: 5px;
+}
+
+.error{
+	display: inline-block;
+	font-size: 9pt;
+	font-style: italic;
+	color: #cd0a0a;
+}
+
+.errorField{
+	border: 1px solid #cd0a0a;
+	background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+}
+
+.date {
+	background-image: url('../images/calendar.png');
+	background-position: right center;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+}
+
+#actions h1{
+	padding-right: 20px;
+	display: inline;
+}
+
+.addLink{
+	background-repeat: no-repeat;
+	background-image: url('../images/plus.png');
+	padding-left: 20px;
+	
+}
+
+/* Lister navigation */
+.navPanel {
+	float: right;
+	color: #9b9b9b;
+	font-size: 0.9em;
+	line-height: 25px;
+}
+
+.navPanelControls{
+	display: none;
+}
+
+#navPanelTop{
+	padding-bottom: 8px;
+}
+
+#navPanelBottom{
+	padding-top: 8px;
+}
+
+.navPanel button, .navPanel select, .navPanel div {
+	float:left;
+	margin-left:2px;
+	margin-right:2px;
+	height: 25px;
+}
+
+.navPanel input{
+	border: 1px solid #B2B4B5;
+	border-radius: 3px;
+}
+
+.navPanel button {
+	width: 28px;
+	height: 27px;
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url('../images/nav_btn.png');
+}
+
+.navPanel button[disabled]:hover {
+	background-image: url('../images/nav_btn.png');
+}
+
+.navPanel button:hover {
+	background-image: url('../images/nav_btn_hover.png');
+}
+
+/* Fix stupid Firefox paddings in buttons */
+button::-moz-focus-inner { 
+	padding: 0; 
+	border: 0; 
+}
+
+.navPanel button span{
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.lastBtn span{
+	background-image: url('../images/last.png');
+}
+.firstBtn span{
+	background-image: url('../images/first.png');
+}
+.prevBtn span{
+	background-image: url('../images/prev.png');
+}
+.nextBtn span{
+	background-image: url('../images/next.png');
+}
+
+#actions {
+	padding-bottom: 15px;
+}
+
+#help{
+	border: 1px solid #d2d2d2;
+	display: none;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #fffea9;
+}
+
+#filters{
+	float: left;
+	color: #9b9b9b;
+	font-size: 0.9em;
+	line-height: 25px;
+}
+
+#filters a.active{
+	font-weight: bold;
+}
+
+#filterDiv{
+	float:right;
+	width:270px;
+}
+
+#filterDiv span.search{
+	display: inline-block;
+	position:relative;
+	left:5px;
+	width: 18px;
+	height: 27px;
+	background-image: url('../images/search.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#filterDiv span.search:hover{
+	background-image: url('../images/search_hover.png');
+}
+
+#filterTxt{
+	font-size: 0.9em;
+	padding: 5px;
+	padding-left: 25px;
+	padding-right: 20px;
+	width:223px;
+	position:absolute;
+	border: 1px solid #B2B4B5;
+	border-radius: 3px;
+}
+
+td.blocked{
+	background-image: url('../images/lock.png');
+	background-position: 99% 10px;
+	background-repeat: no-repeat;
+}
+
+#inTableContentRow{
+}
+
+#inTableContentRow td{
+	background-color: #eef0ee;
+	padding: 0;
+}
+
+#inTableContent{
+	padding-left: 140px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: transparent;
+	background-image: url('../images/row_top.png');
+	background-repeat: repeat-x;
+}
+
+#closeInTableContent{
+	float: right;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url('../images/cross.png');
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+/* Button styles */
+.copyBtn{
+	width: 143px;
+	height: 27px;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: transparent;
+	background-image: url('../images/copy_btn.png');
+	padding-bottom:3px;
+}
+
+#zeroHolder{
+	display: inline-block;
+	position: relative;
+}
+
+.cancelBtn{
+	width: 83px;
+	height: 27px;
+	border: none;
+	color: #363636;
+	font-weight: bold;
+	background-color: transparent;
+	background-image: url('../images/cancel_btn.png');
+	padding-bottom:3px;
+}
+
+.cancel2Btn{
+	width: 83px;
+	height: 27px;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: transparent;
+	background-image: url('../images/cancel2_btn.png');
+	padding-bottom:3px;
+}
+
+.deleteBtn{
+	width: 83px;
+	height: 27px;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: transparent;
+	background-image: url('../images/delete_btn.png');
+	padding-bottom:3px;
+}
+
+.saveBtn{
+	width: 73px;
+	height: 27px;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: url('../images/save_btn.png');
+	padding-bottom:3px;
+}
+
+/* Login form styles */
+#logoDiv {
+	width: 180px;
+    background-color: #1D2025;
+}
+
+#loginHeaderDiv {
+    height: 5%;
+}
+
+#loginHeaderDiv2 {
+	border-bottom: 1px solid grey;
+}
+
+#loginContentDiv {
+    position: relative;
+    height: 95%;
+    min-height: 95%;
+	overflow: hidden;
+}
+
+#loginFooterDiv {
+    position: relative;
+    height: 20px;
+    margin-top: -20px;
+	color: #717171;
+	font-size: 0.8em;
+	text-align: center;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#loginFormDiv {
+	background-color: #EBEBEC;
+	border: 1px solid #D2D2D2;
+	background-image: url('../images/form_top.png');
+	background-repeat: repeat-x;
+	width: 430px;
+	margin:auto;
+	position:relative;
+	top:50%;
+	margin-top: -130px;
+}
+
+#loginFormTblCenter{
+	width: 100%;
+	min-height: 250px;
+	padding-left: 50px;
+	padding-right: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#loginFormTbl{
+	width: 100%;
+	font-size: 0.9em;
+}
+
+#loginFormTbl th{
+	text-align: right;
+	padding-top: 7px;
+	white-space: nowrap;
+	vertical-align: top;
+	color: #333333;
+	font-weight: normal;
+}
+
+#loginFormTbl td{
+	text-align: left;
+	padding-left:20px;
+	padding-bottom:5px;
+	color: #1d2025;
+}
+
+#loginFormTbl input, #loginFormTbl textarea, #loginFormTbl select,
+#offlineFormTbl input, #offlineFormTbl textarea{
+	width: 99%;
+	padding-left: 10px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	border: 1px solid #B2B4B5;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+#offlineContentDiv {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+#offlineFormDiv {
+	background-color: #EBEBEC;
+	border: 1px solid #D2D2D2;
+	background-image: url('../images/form_top.png');
+	background-repeat: repeat-x;
+	width: 700px;
+	height: 250px;
+	margin:auto;
+	position:relative;
+	top:50%;
+	margin-top: -130px;
+}
+
+#offlineFormTbl{
+	width: 100%;
+	font-size: 0.9em;
+}
+
+#offlineFormTbl td{
+	text-align: left;
+	padding-bottom:5px;
+	color: #1d2025;
+}
+
+/* Install script */
+#installFormDiv {
+	background-color: #EBEBEC;
+	border: 1px solid #D2D2D2;
+	background-image: url('../images/form_top.png');
+	background-repeat: repeat-x;
+	width: 430px;
+	height: 400px;
+	margin:auto;
+	position:relative;
+	top:50%;
+	margin-top: -200px;
+}
+
+#installFormDiv a{
+	font-weight: bold;
+}
+
+#installFormTblCenter{
+	width: 100%;
+	height: 400px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+#modulesTbl{
+	width: 100%;
+	font-size: 0.9em;
+}
+
+#modulesTbl th{
+	text-align: right;
+	white-space: nowrap;
+	vertical-align: top;
+	color: #333333;
+	font-weight: normal;
+	width: 100px;
+}
+
+#modulesTbl td{
+	text-align: left;
+	padding-left:20px;
+	padding-bottom:5px;
+	color: #1d2025;
+	font-weight: bold;
+}
+
+#modulesTbl .error2{
+	padding-left:0px;
+	color: red;
+	font-weight: bold;
+	text-align: center;	
+}
+
+/* IP editor */
+#ipRangesContainer td{
+	padding: 0;
+}
+
+.ipeditor{
+    width: 230px;
+}
+
+.ipeditor input{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 35px;
+    text-align: center;
+}
+
+td.iprange{
+    min-width: 213px;
+}
+
+#snattrsTable select{
+	width: 120px;
+}
+
+#snattrsTable input{
+	margin-left: 16px;
+	width: 180px;
+}
+
+.hidden{
+	display: none;
+}
+
+.greenMsg{
+	font-weight: bold;
+	color: #397B02;
+	display: none;
+	margin-left: 10px;
+}
+
+.emptyText{
+	color: grey;
+}
+
+/* New buttons */
+a.greenBtn span {
+    background: url('../images/green_btn_c.png');
+    display: inline-block;
+    height: 27px;
+    margin: 0 0 0 5px;
+    padding: 0 5px 0 5px;
+    background-repeat: repeat-x;
+    line-height: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    text-align: center;
+    min-width: 53px;
+
+}
+a.greenBtn em {
+    position: absolute;
+    width: 5px;
+    height: 27px;
+    background: url('../images/green_btn_r.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+a.greenBtn {
+    height: 27px;
+    display: inline-block;
+    background: url('../images/green_btn_l.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    text-decoration: none !important;
+    cursor: default;
+}
+
+#captchaReload {
+    display: inline-block;
+    font-style: italic;
+    font-size: 9pt;
+    padding-bottom: 5px;
+}
