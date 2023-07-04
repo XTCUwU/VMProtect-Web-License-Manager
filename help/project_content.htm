@@ -1,0 +1,158 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <title>VMProtect WebLM</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { background:#FFF; }
+       .navbar   { font-size: 120%; }
+
+       .heading1 { font-family: Arial,Helvetica; font-weight: bold; font-size: 10pt; color: #000000; text-decoration: none; padding:2px; }
+       .heading2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #000000; text-decoration: none; padding:2px; }
+
+       .hilight1 { font-family: Arial,Helvetica; font-weight: bold; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; padding:2px; }
+       .hilight2 { font-family: Arial,Helvetica; font-weight: normal; font-size: 10pt; color: #FFFFFF; background: #002682; text-decoration: none; padding:2px; }
+
+       /* TOC LIST CSS */
+       #toc    { padding: 0; margin: 0; }
+       #toc li { margin-top: 2px; padding-left: 10px !important; background-position: 0 5px !important; }
+       #toc ul { padding-left: 0; padding-right: 0; margin-left: 0; margin-right: 0 }
+       /* TOC LIST CSS */
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<p class="navbar"><b>WebLM Help Contents</b>
+
+
+</p>
+<hr/>
+
+  <!-- Place holder for the TOC - this variable is REQUIRED! -->
+  <ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="what_is_online_activation_and_license_management_1.htm" target="hmcontent"><span class="heading1" id="s1">What is Online Activation and License Management?</span></a>
+</li>
+<li class="heading1" id="i2" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="installing_weblm.htm" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">Installing WebLM</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="step_1_uploading.htm" target="hmcontent"><span class="heading2" id="s2.1">Step 1: Uploading</span></a>
+</li>
+<li class="heading2" id="i2.2" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="step_2_database_access.htm" target="hmcontent"><span class="heading2" id="s2.2">Step 2: Database Access</span></a>
+</li>
+<li class="heading2" id="i2.3" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="step_3_creating_an_administrator.htm" target="hmcontent"><span class="heading2" id="s2.3">Step 3: Creating an Administrator</span></a>
+</li>
+<li class="heading2" id="i2.4" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a2.4" href="step_4_completing_installation.htm" target="hmcontent"><span class="heading2" id="s2.4">Step 4: Completing Installation</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="quick_start_guide.htm" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Quick Start Guide</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="step_1_create_an_agent.htm" target="hmcontent"><span class="heading2" id="s3.1">Step 1: Create an Agent</span></a>
+</li>
+<li class="heading2" id="i3.2" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="step_2_create_a_product.htm" target="hmcontent"><span class="heading2" id="s3.2">Step 2: Create a Product</span></a>
+</li>
+<li class="heading2" id="i3.3" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="step_3_generate_a_serial_number.htm" target="hmcontent"><span class="heading2" id="s3.3">Step 3: Generate a Serial Number</span></a>
+</li>
+<li class="heading2" id="i3.4" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a3.4" href="step_4_setup_the_automatic_serial_number_generati.htm" target="hmcontent"><span class="heading2" id="s3.4">Step 4: Setup the Automatic Serial Number Generation</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="licenses.htm" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Licenses</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="adding_a_license.htm" target="hmcontent"><span class="heading2" id="s4.1">Adding a license</span></a>
+</li>
+<li class="heading2" id="i4.2" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="searching_for_a_license.htm" target="hmcontent"><span class="heading2" id="s4.2">Searching for a license</span></a>
+</li>
+<li class="heading2" id="i4.3" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="editing_a_license.htm" target="hmcontent"><span class="heading2" id="s4.3">Editing a license</span></a>
+</li>
+<li class="heading2" id="i4.4" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="copy_serial_number.htm" target="hmcontent"><span class="heading2" id="s4.4">Copy serial number</span></a>
+</li>
+<li class="heading2" id="i4.5" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="blocking_compromised_licenses.htm" target="hmcontent"><span class="heading2" id="s4.5">Blocking compromised licenses</span></a>
+</li>
+<li class="heading2" id="i4.6" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.6" href="deleting_a_license.htm" target="hmcontent"><span class="heading2" id="s4.6">Deleting a license</span></a>
+</li>
+<li class="heading2" id="i4.7" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a4.7" href="importing_licenses.htm" target="hmcontent"><span class="heading2" id="s4.7">Importing licenses</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="activation_codes.htm" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">Activation Codes</span></a>
+<ul id="ul5" style="list-style-type:none">
+<li class="heading2" id="i5.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="adding_new_activation_code.htm" target="hmcontent"><span class="heading2" id="s5.1">Adding new activation code</span></a>
+</li>
+<li class="heading2" id="i5.2" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.2" href="searching_for_a_code.htm" target="hmcontent"><span class="heading2" id="s5.2">Searching for a code</span></a>
+</li>
+<li class="heading2" id="i5.3" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.3" href="editing_a_code.htm" target="hmcontent"><span class="heading2" id="s5.3">Editing a code</span></a>
+</li>
+<li class="heading2" id="i5.4" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.4" href="displaying_licenses.htm" target="hmcontent"><span class="heading2" id="s5.4">Displaying licenses</span></a>
+</li>
+<li class="heading2" id="i5.5" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.5" href="blocking_compromised_codes.htm" target="hmcontent"><span class="heading2" id="s5.5">Blocking compromised codes</span></a>
+</li>
+<li class="heading2" id="i5.6" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.6" href="deleting_a_code.htm" target="hmcontent"><span class="heading2" id="s5.6">Deleting a code</span></a>
+</li>
+<li class="heading2" id="i5.7" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a5.7" href="importing_codes.htm" target="hmcontent"><span class="heading2" id="s5.7">Importing codes</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i6" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="products.htm" target="hmcontent"><span class="heading1" id="s6" ondblclick="return dblclicked(this)">Products</span></a>
+<ul id="ul6" style="list-style-type:none">
+<li class="heading2" id="i6.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.1" href="adding_a_product.htm" target="hmcontent"><span class="heading2" id="s6.1">Adding a product</span></a>
+</li>
+<li class="heading2" id="i6.2" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.2" href="adding_a_product_mode.htm" target="hmcontent"><span class="heading2" id="s6.2">Adding a product mode</span></a>
+</li>
+<li class="heading2" id="i6.3" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.3" href="show_licenses.htm" target="hmcontent"><span class="heading2" id="s6.3">Show licenses</span></a>
+</li>
+<li class="heading2" id="i6.4" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.4" href="editingdeactivating_a_product.htm" target="hmcontent"><span class="heading2" id="s6.4">Editing/deactivating a product</span></a>
+</li>
+<li class="heading2" id="i6.5" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.5" href="keygen_url.htm" target="hmcontent"><span class="heading2" id="s6.5">Keygen URL</span></a>
+</li>
+<li class="heading2" id="i6.6" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.6" href="importingexporting_a_product.htm" target="hmcontent"><span class="heading2" id="s6.6">Importing/Exporting a product</span></a>
+</li>
+<li class="heading2" id="i6.7" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a6.7" href="deleting_a_product.htm" target="hmcontent"><span class="heading2" id="s6.7">Deleting a product</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i7" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="agents.htm" target="hmcontent"><span class="heading1" id="s7" ondblclick="return dblclicked(this)">Agents</span></a>
+<ul id="ul7" style="list-style-type:none">
+<li class="heading2" id="i7.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a7.1" href="adding_a_new_agent.htm" target="hmcontent"><span class="heading2" id="s7.1">Adding a new agent</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i8" data-bg="branch_closed.png;branch_open.png" style="background:url(branch_open.png) no-repeat;cursor:pointer;padding-left:11px" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="users.htm" target="hmcontent"><span class="heading1" id="s8" ondblclick="return dblclicked(this)">Users</span></a>
+<ul id="ul8" style="list-style-type:none">
+<li class="heading2" id="i8.1" style="background:url() no-repeat;padding-left:11px" onclick="return clicked(this,event)"><a class="heading2" id="a8.1" href="adding_a_new_user.htm" target="hmcontent"><span class="heading2" id="s8.1">Adding a new user</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons(,'branch_open.png','branch_closed.png');</script>
+
+
+</body>
+</html>

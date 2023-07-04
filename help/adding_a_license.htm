@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Adding a license</title>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <style type="text/css">
+     body { margin: 0px; background: #FFFFFF; }
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.htm", "adding_a_license.htm");
+   </script>
+</head>
+<body>
+
+
+<table id="topic_hdr" style="width:100%; border:none; border-spacing:0px; padding:5px; background:#D0D0D0">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Adding a license</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<table id="topic_bdy" style="width:100%;border:none;border-spacing:0px"><tr style="vertical-align:top"><td style="text-align:left;padding:5px">
+<p>To add a new license, click the Add button above, or select the Add New License item in the Licenses section at the left. The following screen appears:</p>
+<p>&nbsp;</p>
+<p><img src="add_new_license.png" width="862" height="722" style="width:862px;height:722px;border:none" /></p>
+<p>&nbsp;</p>
+<p>Select the product the new code applies to. Then, fill in the customer name, e-mail address, purchase date, and order reference number and optional comments. The second block of options is mostly used with automatic license key generation. </p>
+<p>&nbsp;</p>
+<p>Hardware id links the serial number to a particular hardware configuration effectively preventing multiple activations of the software with the same serial number on many different computers. </p>
+<p>&nbsp;</p>
+<p>The Expire date parameter defines how long the serial number should work. The Time limit option sets the amount of minutes the license remains valid after the software is launched. Both options are convenient for providing limited time keys, free time-limited giveaways, giving keys to people for testing and other means. </p>
+<p>&nbsp;</p>
+<p>The Max build date option can be used to make some licenses valid only up to a certain software version compiled earlier than the specified date. That is, such a license would work with say version 1.0, but would stop working with version 2.0 as long as its compilation date is later than the value of this parameter.</p>
+<p>&nbsp;</p>
+<p>The Data option allows you to encode additional data into the serial number and securely pass this information to the software to make it react, function or look different depending on that data. For example, you could pass the branding information to the software to display different logotypes or links inside. Other example is limiting functionality of the software depending on particular conditions. You can pass those conditions via the Data field. The application can retrieve serial number data using the VMProtectGetSerialNumberData API function.</p>
+<p>&nbsp;</p>
+<p>Note: you can enter both text and binary data to this field. The binary data should be entered using the \0x prefix and an appropriate hexadecimal code: \0x20.</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

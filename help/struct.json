@@ -1,0 +1,48 @@
+{"root_title": "WebLM User Manual", "children": [
+ {"file": "what_is_online_activation_and_license_management_1.htm", "title": "what-is-online-activation-and-license-management"},
+ {"file": "installing_weblm.htm", "title": "installing-weblm", "children": [
+  {"file": "step_1_uploading.htm", "title": "step-1-uploading"},
+  {"file": "step_2_database_access.htm", "title": "step-2-database-access"},
+  {"file": "step_3_creating_an_administrator.htm", "title": "step-3-creating-an-administrator"},
+  {"file": "step_4_completing_installation.htm", "title": "step-4-completing-installation"}
+ ]},
+ {"file": "quick_start_guide.htm", "title": "quick-start-guide", "children": [
+  {"file": "step_1_create_an_agent.htm", "title": "step-1-create-an-agent"},
+  {"file": "step_2_create_a_product.htm", "title": "step-2-create-a-product"},
+  {"file": "step_3_generate_a_serial_number.htm", "title": "step-3-generate-a-serial-number"},
+  {"file": "step_4_setup_the_automatic_serial_number_generati.htm", "title": "step-4-setup-the-automatic-serial-number-generation"}
+ ]},
+ {"file": "licenses.htm", "title": "licenses", "children": [
+  {"file": "adding_a_license.htm", "title": "adding-a-license"},
+  {"file": "searching_for_a_license.htm", "title": "searching-for-a-license"},
+  {"file": "editing_a_license.htm", "title": "editing-a-license"},
+  {"file": "copy_serial_number.htm", "title": "copy-serial-number"},
+  {"file": "blocking_compromised_licenses.htm", "title": "blocking-compromised-licenses"},
+  {"file": "deleting_a_license.htm", "title": "deleting-a-license"},
+  {"file": "importing_licenses.htm", "title": "importing-licenses"}
+ ]},
+ {"file": "activation_codes.htm", "title": "activation-codes", "children": [
+  {"file": "adding_new_activation_code.htm", "title": "adding-new-activation-code"},
+  {"file": "searching_for_a_code.htm", "title": "searching-for-a-code"},
+  {"file": "editing_a_code.htm", "title": "editing-a-code"},
+  {"file": "displaying_licenses.htm", "title": "displaying-licenses"},
+  {"file": "blocking_compromised_codes.htm", "title": "blocking-compromised-codes"},
+  {"file": "deleting_a_code.htm", "title": "deleting-a-code"},
+  {"file": "importing_codes.htm", "title": "importing-codes"}
+ ]},
+ {"file": "products.htm", "title": "products", "children": [
+  {"file": "adding_a_product.htm", "title": "adding-a-product"},
+  {"file": "adding_a_product_mode.htm", "title": "adding-a-product-mode"},
+  {"file": "show_licenses.htm", "title": "show-licenses"},
+  {"file": "editingdeactivating_a_product.htm", "title": "editingdeactivating-a-product"},
+  {"file": "keygen_url.htm", "title": "keygen-url"},
+  {"file": "importingexporting_a_product.htm", "title": "importingexporting-a-product"},
+  {"file": "deleting_a_product.htm", "title": "deleting-a-product"}
+ ]},
+ {"file": "agents.htm", "title": "agents", "children": [
+  {"file": "adding_a_new_agent.htm", "title": "adding-a-new-agent"}
+ ]},
+ {"file": "users.htm", "title": "users", "children": [
+  {"file": "adding_a_new_user.htm", "title": "adding-a-new-user"}
+ ]}
+]}

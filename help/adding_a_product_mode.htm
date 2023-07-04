@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Adding a product mode</title>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <style type="text/css">
+     body { margin: 0px; background: #FFFFFF; }
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.htm", "adding_a_product_mode.htm");
+   </script>
+</head>
+<body>
+
+
+<table id="topic_hdr" style="width:100%; border:none; border-spacing:0px; padding:5px; background:#D0D0D0">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Adding a product mode</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<table id="topic_bdy" style="width:100%;border:none;border-spacing:0px"><tr style="vertical-align:top"><td style="text-align:left;padding:5px">
+<p>Product modes are various states the software may work in. Common examples of product modes are trial mode and full-featured mode. Other possible uses of this function is implementing various licensing schemes (home license, business license, enterprise license) having certain functional differences or making alpha/beta/promo versions with certain time limitations. You can also create custom license types using the Data field (see below).</p>
+<p>&nbsp;</p>
+<p>You can add a new mode to the product in two ways: either click the Add New Mode item in the Products section, or point a core product line in the list to bring up the function menu, and click the Add Mode link:</p>
+<p>&nbsp;</p>
+<p><img src="products_add_mode_menu.png" width="658" height="272" style="width:658px;height:272px;border:none" /></p>
+<p>&nbsp;</p>
+<p>The following screen appears:</p>
+<p>&nbsp;</p>
+<p><img src="products_add_mode.png" width="880" height="502" style="width:880px;height:502px;border:none" /></p>
+<p>&nbsp;</p>
+<p>Select the product this mode applies to and specify the name of the mode. The rest options specify the way this product mode is limited:</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Hardware ID</span> – links the serial number to a particular hardware configuration effectively preventing multiple activations of the software with the same serial number on many different computers. You can tell WebLM to take hardware information from the URL – in this case it is passed from user’s computer upon first activation. Or you can specify a certain value manually – this allows you to lock this product mode to the specific computer only.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Expire date</span> – sets the period this product mode remains active and available for activation. </p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">“none” means the product mode never expires – use this for full-functional versions of your software only;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">“days from activation date” – the product will be active and available for activation for a specified number of days since the activation date. This is a great option for trial versions of the software.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">“days from purchase date” – very similar to the above, this option permits usage of the product for the specified number of days since it was purchased. You may want to prefer this option if you need to encourage users to activate the program shortly after the purchase.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:24px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none">“value” – set the date manually. This option is good for beta versions or promo licenses that should not work past the specified date.</td></tr></table></div><p>&nbsp;</p>
+<p>If the expire date is set, the application can read the expiration date from the serial number and warn a user about upcoming expiration.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Time limit</span> – sets the amount of time the application can work if launched. Games or multimedia software are usually the best candidates for such type of limitation.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Max build date</span> – use this option to prevent running newer versions of the software with the same key. For example, you can allow free upgrades of the product within 120 days after the purchase and require paid renewal otherwise.</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: bold;">Data</span> – you can pass additional information to the application in this field. Fill it with specific data to add more conditions to functional limitations, or use this field to indicate various versions of the product and make it respond this or that way. The application can retrieve serial number data using the VMProtectGetSerialNumberData API function.</p>
+<p>&nbsp;</p>
+<p>Note: you can enter both text and binary data to this field. The binary data should be entered using the \0x prefix and an appropriate hexadecimal code: \0x20.</p>
+
+</td></tr></table>
+
+</body>
+</html>

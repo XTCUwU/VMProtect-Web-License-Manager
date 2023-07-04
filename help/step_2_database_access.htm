@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Step 2: Database Access</title>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <style type="text/css">
+     body { margin: 0px; background: #FFFFFF; }
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.htm", "step_2_database_access.htm");
+   </script>
+</head>
+<body>
+
+
+<table id="topic_hdr" style="width:100%; border:none; border-spacing:0px; padding:5px; background:#D0D0D0">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Step 2: Database Access</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<table id="topic_bdy" style="width:100%;border:none;border-spacing:0px"><tr style="vertical-align:top"><td style="text-align:left;padding:5px">
+<p>The next screen you’ll see is a database access form. There you should enter parameters to access databases on your server. Usually you get this from your hoster or from phpMyAdmin software. The fields are standard, so you shouldn’t have any problems with filling them. Not only does the table prefix parameter distinguish the WebLM tables from other tables in the database, but it also allows you to have several WebLM instances in the same database.</p>
+<p>&nbsp;</p>
+<p>In case of multiple WebLM instances, you should choose this parameter carefully or you may override the other instance’s tables. However, this doesn’t matter if you install just a single WebLM instance.</p>
+<p><img src="connecting_to_database.png" width="819" height="556" style="width:819px;height:556px;border:none" /></p>
+<p>After filling the form, click the “Connect” button. If all fields are OK, the “Connect” button changes to “Install Data Tables” indicating the successful connection to the database. Otherwise an error message is shown. Fix the issue it displays and try again.</p>
+<p>&nbsp;</p>
+<p>When done, click the “Install Data Tables” button to allow WebLM create all tables it needs.</p>
+<p>&nbsp;</p>
+<p><img src="install_data_tables.png" width="819" height="556" style="width:819px;height:556px;border:none" /></p>
+<p class="p_heading3"><span class="f_heading3">Further reading</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="step_3_creating_an_administrator.htm" class="topiclink">Step 3: Creating an Administrator</a></td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

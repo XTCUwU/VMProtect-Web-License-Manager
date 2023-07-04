@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Step 2: Create a Product</title>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <style type="text/css">
+     body { margin: 0px; background: #FFFFFF; }
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.htm", "step_2_create_a_product.htm");
+   </script>
+</head>
+<body>
+
+
+<table id="topic_hdr" style="width:100%; border:none; border-spacing:0px; padding:5px; background:#D0D0D0">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">Step 2: Create a Product</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<table id="topic_bdy" style="width:100%;border:none;border-spacing:0px"><tr style="vertical-align:top"><td style="text-align:left;padding:5px">
+<p>The second step is to create or import a product. Product is a set of data required to generate serial numbers. You should create a new product every time you need a new type of serial numbers that are not compatible with any others. For example, if you already have a product “Word” and are about to release the advanced version “Word Pro”, you probably don’t need a new product, as they may share the same set of serial numbers. However, if you are going to release a “Photoshop” – it’s a good idea to create a new product.</p>
+<p class="p_heading3"><span class="f_heading3">Creating a New Product</span></p>
+<p>Now let’s start from creating a new product from scratch. Click the “Add New Product” link at the left panel. Enter the name of the product. Leave all options with their default values for now:</p>
+<p><img src="products_add.png" width="880" height="427" style="width:880px;height:427px;border:none" /></p>
+<p>Then click the “Save” button. You should see the new product in the list. Move the mouse to that item and you’ll see the set of actions you may do. We call this a function menu. You need to export that product to use it in VMProtect. Click the “Export” link and save the VMP file to the appropriate place. Now you may use it as a separate licensing data file, keeping the protection stuff in another file. This allows you to sync the online and offline versions easily.</p>
+<p class="p_heading3"><span class="f_heading3">Importing Existing Product</span></p>
+<p>Another way to add a product is to import the existing VMP file with the licensing data. Again, we suggest splitting the licensing information from the protection data in VMProtect, so you can sync the licensing data easier. Now when you have a good VMP file with the licensing data, click the “Import Project” link at the left panel.</p>
+<p><img src="products_import.png" width="880" height="257" style="width:880px;height:257px;border:none" /></p>
+<p>Pick the project file and click the “Import” button. After confirming the operation the product will be added to the list.</p>
+<p class="p_heading3"><span class="f_heading3">Synchronizing online and offline copies</span></p>
+<p>Both methods can be used to synchronize online and offline copies of your VMP file. You should keep offline version up-to-date to be able to block compromised serial numbers. Usually you export the product and replace the local VMP file just before you build the new release. This way all blocked serial numbers become really blocked.</p>
+<p>&nbsp;</p>
+<p>Once again, we really suggest to separate protection stuff from the licensing data using a separate VMP file for the licenses. If for any reason you have changed the local version of the VMP file, just import it as a new product. Web License Manager detects that and updates the online version of the project.</p>
+<p class="p_heading3"><span class="f_heading3">Further reading</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="step_3_generate_a_serial_number.htm" class="topiclink">Step 3: Generate a Serial Number</a></td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

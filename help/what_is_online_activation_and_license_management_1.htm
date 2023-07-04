@@ -1,0 +1,84 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+   <title>What is Online Activation and License Management?</title>
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <style type="text/css">
+     body { margin: 0px; background: #FFFFFF; }
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.htm", "what_is_online_activation_and_license_management_1.htm");
+   </script>
+</head>
+<body>
+
+
+<table id="topic_hdr" style="width:100%; border:none; border-spacing:0px; padding:5px; background:#D0D0D0">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <h1 class="p_Heading1"><span class="f_Heading1">What is Online Activation and License Management?</span></h1>
+
+    </td>
+  </tr>
+</table>
+
+
+<table id="topic_bdy" style="width:100%;border:none;border-spacing:0px"><tr style="vertical-align:top"><td style="text-align:left;padding:5px">
+<p>Online activation license management is a proven and generally accepted way to register and protect software.</p>
+<p>&nbsp;</p>
+<p>A software product today is usually a free-to-try product of a kind. This means anyone can download it and use it without paying money. At the same time, such downloadable version is usually limited – either time limited or limited in its functions. In order to unlock the entire possibilities of a product and to be able to use it beyond the trial period, a user must purchase the software.</p>
+<p>&nbsp;</p>
+<p>So let’s say, some user purchases the software. The vendor of the software gets notified about the purchase and now should unlock the full functionality of the product and remove any time restriction it has. How is this done?</p>
+<p>&nbsp;</p>
+<p>Time and functional limitations are implemented using some kind of software protection system like VMProtect Ultimate. So the trick is to let this protection system know that the software is now purchased and should work in its full strength. Registration keys (license keys, activation codes) are used for that. Surely, you have seen many of them. Here is how it works.</p>
+<p>&nbsp;</p>
+<p>Upon purchase, a user receives his personal registration key. Then, he should enter this key in the application. The application sends an encrypted query to the activation server and passes the registration key to it. The activation server checks if the key is valid, generates a serial number and sends it back to the software. The protection system of the software applies the serial number and finally unlocks certain functions of the application and removes all time limitations.</p>
+<p>&nbsp;</p>
+<p>Since every user registers via the activation system, a vendor can manage and control every issued license: limit the number of times a license can be activated, block compromised registration keys, re-send lost keys and so on.</p>
+<p>&nbsp;</p>
+<p>At the same time, online activation prevents unauthorized usage of the same license on multiple computers, stealing of the key and other types of frauds.</p>
+<p class="p_heading3"><span class="f_heading3">What is VMProtect Web License Manager (WebLM)?</span></p>
+<p>Basically, any software vendor can take benefit of using VMProtect Web License Manager. WebLM delivers simple, fast and user-friendly way to embed an online activation system to software, track licenses and installations and manage license keys.</p>
+<p>&nbsp;</p>
+<p>Web License Manager or simply WebLM is a full-featured software licensing and activation system. With it you can track online purchases, manage customers and license numbers, and control the number of installations of your programs.</p>
+<p>&nbsp;</p>
+<p>WebLM easily integrates to all major e-commerce providers and automates most of routine license management and control tasks – keeping registration information, sending and re-sending license keys, blocking stolen license keys and managing online activations.</p>
+<p>&nbsp;</p>
+<p>WebLM works in conjunction with VMProtect Ultimate. The former provides firm and secure protection of your software from attacks, while WebLM simplifies managing and distribution of license keys. </p>
+<p class="p_heading3"><span class="f_heading3">Who needs WebLM?</span></p>
+<p>Here is a simple questionnaire to see, if you need WebLM:</p>
+<p>1. You want to safely keep customer data and be able to refer to them at any time, regardless of the e-commerce provider.</p>
+<p>2. You need a web-based activation system to restrict unauthorized installs of your product.</p>
+<p>3. You want short, easy-to-type activation codes for your software without jeopardizing its hack-proof capabilities.</p>
+<p>4. You want to send license keys to users automatically upon purchase.</p>
+<p>5. You need a way to block stolen or compromised license keys.</p>
+<p>&nbsp;</p>
+<p>WebLM is all of the above, but if you answered Yes to at least one question, you still want to try it.</p>
+<p class="p_heading3"><span class="f_heading3">How it works?</span></p>
+<p>Here is a more technical description of how online activation is implemented in VMProtect Ultimate. </p>
+<p>&nbsp;</p>
+<p>Whenever a user attempts to activate the software with an activation code the following happens:</p>
+<p>1. The software calls VMProtectActivateLicense function. This function compiles and sends a POST request to the activation server containing all parameters specified in the settings of this VMProtect project. It also sends the activation code entered by a user and the hardware ID of the computer. </p>
+<p>2. WebLM receives this request and looks for the specified activation code in the database. There can be several possible outcomes depending on whether the code is found or not. </p>
+<p style="margin: 0px 0px 0px 47px;">a. If the activation code isn’t found in the DB, WebLM returns the ACTIVATION_BAD_CODE error;</p>
+<p style="margin: 0px 0px 0px 47px;">b. If the code is found, but is blocked, WebLM returns the ACTIVATION_BANNED error to the app.</p>
+<p style="margin: 0px 0px 0px 47px;">c. If the code is found, but it doesn’t match the product field, WebLM returns the ACTIVATION_BAD_CODE error. Obviously, a user can only activate the product or the product mode he did purchase. So if the hash of licensing parameters doesn’t match the hash of the given product, WebLM returns the ACTIVATION_BAD_CODE error. The hash of licensing parameters is encoded in the activation URL and is send along with other parameters upon activation attempt.</p>
+<p>3. Then WebLM checks if the product or the product mode uses hardware id protection. If HWID binding is used, WebLM looks for a previously issued non-blocked license for that HWID. Otherwise, WebLM takes the very first license with no hardware binding. If a suitable license was found here, WebLM returns the corresponding serial number it to the application.</p>
+<p>4. On the next step, WebLM calculates the number of available activations as follows: the amount of activations the activation code has minus the number of non-blocked licenses already issued for this activation code. If the result is zero or less, WebLM returns the ACTIVATION_ALREADY_USED error.</p>
+<p>5. Next, WebLM checks the expiry date of the activation code. If such date is specified and that date has passed, WebLM returns the ACTIVATION_EXPIRED error.  </p>
+<p>6. If the number of available activations calculated on the step 4 is greater than zero, WebLM creates a license in accordance with product/mode parameters. The registration name and the e-mail of a customer are taken from the activation URL.</p>
+<p>7. Finally, a new license (serial number) is returned back to the application.</p>
+<p class="p_heading3"><span class="f_heading3">Further reading</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="installing_weblm.htm" class="topiclink">Installing WebLM</a></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="border:none;border-spacing:0px;padding:0px;line-height: normal;"><tr valign="baseline" style="vertical-align:baseline"><td style="border:none;width:13px"><span style="font-size:10pt; font-family: 'Arial Unicode MS','Lucida Sans Unicode','Arial';color:#000000;">&#8226;</span></td><td style="border:none"><a href="quick_start_guide.htm" class="topiclink">Quick Start Guide</a></td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>
